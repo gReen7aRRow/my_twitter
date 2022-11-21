@@ -1,11 +1,8 @@
-<!DOCTYPE html>
+{% load django_bootstrap5 %}
 
-<html>
-    <head>
-        <title>Home page</title>
-    </head>
+<form action="/url/to/submit/" method="post" class="form">
+    {% csrf_token %}
 
-    <body>
-        <h1>Welcome to the Future!</h1>
-    </body>
-</html>
+    {% bootstrap_button button_type="submit" content="OK" %}
+    {% bootstrap_button button_type="reset" content="Cancel" %}
+</form>
