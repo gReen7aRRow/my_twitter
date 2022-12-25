@@ -1,8 +1,9 @@
-{% load django_bootstrap4 %}
+{% extends 'base.html' %}
 
-<form action="/url/to/submit/" method="post" class="form">
-    {% csrf_token %}
+{% block title %}
+    myTwitter
+{% endblock %}
 
-    {% bootstrap_button button_type="submit" content="OK" %}
-    {% bootstrap_button button_type="reset" content="Cancel" %}
-</form>
+{% block content %}
+    <h1>Главная страница</h1>
+{% endblock %}
